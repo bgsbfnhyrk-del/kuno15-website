@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getränke - KUNO15</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+New&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            color: #000;
+            background: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-section {
+            display: flex;
+            height: 70vh;
+            width: 100%;
+        }
+
+        .logo-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            padding: 2rem;
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+        }
+
+        .hero-image-container {
+            flex: 1;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid #000;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #666;
+            border: 1px solid #000;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background: #000;
+            padding: 1.5rem 0;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            gap: 4rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #ccc;
+        }
+
+        .content-section {
+            padding: 4rem 2rem;
+            border-bottom: 1px solid #000;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-align: center;
+        }
+
+        .single-column {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .price-table td {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ddd;
+            vertical-align: top;
+        }
+
+        .price-table td:last-child {
+            text-align: right;
+            padding-left: 2rem;
+        }
+
+        .price-section {
+            margin-bottom: 3rem;
+        }
+
+        .price-section h3 {
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-section {
+                flex-direction: column;
+                height: auto;
+            }
+            
+            .logo-container, .hero-image-container {
+                flex: none;
+                height: 50vh;
+            }
+            
+            .hero-image-container {
+                border-left: none;
+                border-top: 1px solid #000;
+            }
+            
+            .nav-menu ul {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .logo {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="header-section">
+            <div class="logo-container">
+                <div class="logo">
+                    <svg viewBox="0 0 382 677" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                        <g transform="matrix(1,0,0,1,-134.548,-142.391)">
+                            <g transform="matrix(0.993789,0,0,1.27536,1.00621,-38.4214)">
+                                <rect x="162" y="171" width="322" height="483" style="fill:rgb(227,0,255);fill-opacity:0;"/>
+                                <path d="M484,171L484,654L162,654L162,171L484,171ZM475.615,177.534L170.385,177.534L170.385,647.466L475.615,647.466L475.615,177.534Z"/>
+                            </g>
+                            <g transform="matrix(1,0,0,1,-49.6429,73)">
+                                <text x="248.84px" y="282.244px" style="font-family:'Courier New',monospace;font-size:200px;fill:#000000;">KU</text>
+                                <text x="248.84px" y="482.244px" style="font-family:'Courier New',monospace;font-size:200px;fill:#000000;">NO</text>
+                                <text x="248.84px" y="682.244px" style="font-family:'Courier New',monospace;font-size:200px;fill:#000000;">15</text>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="image-placeholder">
+                    GETRÄNKE BILD
+                </div>
+            </div>
+        </section>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="uber-uns.html">Über uns</a></li>
+                <li><a href="getranke.html">Getränke</a></li>
+                <li><a href="speisen.html">Speisen</a></li>
+                <li><a href="mittagstisch.html">Mittagstisch</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <section class="content-section">
+            <div class="container">
+                <h2 class="section-title">Getränke</h2>
+                
+                <div class="single-column">
+                    <div class="price-section">
+                        <h3>ALL UNSERE GETRÄNKE GIBT ES WAHLWEISE MIT BIO-KUHMILCH, HAFER-ODER SOJAMILCH</h3>
+                        
+                        <table class="price-table">
+                            <tr><td>ESPRESSO / DOPPIO</td><td>2.40 / 3.40</td></tr>
+                            <tr><td>ESPRESSO MACCHIATO</td><td>3.00</td></tr>
+                            <tr><td>DOPPIO MACCHIATO</td><td>3.80</td></tr>
+                            <tr><td>AMERICANO</td><td>3.00</td></tr>
+                            <tr><td>FILTER</td><td>3.00</td></tr>
+                            <tr><td>CAPPUCCINO</td><td>3.60 / 4.20</td></tr>
+                            <tr><td>FLAT WHITE</td><td>4.00</td></tr>
+                            <tr><td>CAFFE LATTE</td><td>4.20</td></tr>
+                            <tr><td>MATCHA</td><td>4.00</td></tr>
+                            <tr><td>RIO CHAI</td><td>4.50</td></tr>
+                            <tr><td>KAKAO</td><td>3.50</td></tr>
+                            <tr><td>HAFEE/SOJA</td><td>0.30</td></tr>
+                            <tr><td>TEE DIV. SORTEN</td><td>3.50</td></tr>
+                            <tr><td>FRISCHER TEE</td><td>4.00</td></tr>
+                        </table>
+                    </div>
+
+                    <div class="price-section">
+                        <h3>SOFT DRINKS & WINTERGETRÄNKE</h3>
+                        <table class="price-table">
+                            <tr><td>GOLDENE MILCH WÜRZIG/SÜSS</td><td>4.00</td></tr>
+                            <tr><td>HAUSGEMACHTER PUMPKIN SPICE LATTE</td><td>4.50</td></tr>
+                            <tr><td>AFFOGATO VANILLE/KARAMELL</td><td>4.30</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2023 KUNO15. Alle Rechte vorbehalten.</p>
+        </footer>
+    </div>
+</body>
+</html>
