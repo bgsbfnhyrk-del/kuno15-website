@@ -29,12 +29,12 @@
             flex-direction: column;
         }
 
-        /* Main Content Area - Logo and Hero Image */
-        .main-content {
+        /* Main Visual Content - Logo and Hero Image */
+        .main-visual {
             flex: 1;
             display: flex;
             width: 100%;
-            height: calc(100vh - 80px); /* Full height minus navigation */
+            height: calc(100vh - 80px);
         }
 
         .logo-container {
@@ -43,7 +43,6 @@
             align-items: center;
             justify-content: center;
             background: #fff;
-            padding: 2rem;
         }
 
         .logo {
@@ -61,16 +60,10 @@
             border-left: 1px solid #000;
         }
 
-        .image-placeholder {
+        .hero-image {
             width: 100%;
             height: 100%;
-            background: #f5f5f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: #666;
-            border: 1px solid #000;
+            object-fit: cover;
         }
 
         /* Bottom Navigation Menu */
@@ -122,7 +115,7 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .main-content {
+            .main-visual {
                 flex-direction: column;
                 height: calc(100vh - 120px);
             }
@@ -170,8 +163,8 @@
 </head>
 <body>
     <div class="full-screen-composition">
-        <!-- Main Content Area - Logo and Hero Image Side by Side -->
-        <section class="main-content">
+        <!-- Main Visual Content - Logo and Hero Image Side by Side -->
+        <section class="main-visual">
             <div class="logo-container">
                 <div class="logo">
                     <svg viewBox="0 0 382 677" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
@@ -190,8 +183,9 @@
                 </div>
             </div>
             <div class="hero-image-container">
-                <div class="image-placeholder">
-                    HAUPTBILD HIER EINFÜGEN
+                <!-- Replace with actual hero image -->
+                <div style="width:100%;height:100%;background:linear-gradient(45deg, #f0f0f0, #e0e0e0);display:flex;align-items:center;justify-content:center;color:#666;font-size:1.1rem;">
+                    HERO BILD
                 </div>
             </div>
         </section>
@@ -200,7 +194,7 @@
         <nav class="bottom-navigation">
             <div class="nav-menu">
                 <ul>
-                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="startseite.html">Startseite</a></li>
                     <li><a href="uber-uns.html">Über uns</a></li>
                     <li><a href="getranke.html">Getränke</a></li>
                     <li><a href="speisen.html">Speisen</a></li>
