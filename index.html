@@ -7,203 +7,190 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container header-inner">
-            <div class="logo">
-                <svg viewBox="0 0 382 677">
-                    <g transform="matrix(1,0,0,1,-134.548,-142.391)">
-                        <g transform="matrix(0.993789,0,0,1.27536,1.00621,-38.4214)">
-                            <rect x="162" y="171" width="322" height="483" style="fill:rgb(227,0,255);fill-opacity:0;"/>
-                            <path d="M484,171L484,654L162,654L162,171L484,171ZM475.615,177.534L170.385,177.534L170.385,647.466L475.615,647.466L475.615,177.534Z"/>
-                        </g>
-                        <g transform="matrix(1,0,0,1,-49.6429,73)">
-                            <text x="248.84px" y="282.244px" style="font-family:'Courier New',monospace;font-size:200px;fill:#000000;">KU</text>
-                            <text x="248.84px" y="482.244px" style="font-family:'Courier New',monospace;font-size:200px;fill:#000000;">NO</text>
-                            <text x="248.84px" y="682.244px" style="font-family:'Courier New',monospace;font-size:200px;fill:#000000;">15</text>
-                        </g>
-                    </g>
-                </svg>
-            </div>
-            
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#getranke">Getränke</a></li>
-                    <li><a href="#speisen">Speisen</a></li>
-                    <li><a href="#mittagstisch">Mittagstisch</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
-                    <li><a href="about.html">Über uns</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero" id="home-hero">
-        <div class="container hero-grid">
-            <div class="hero-media">
-                <!-- Primary hero image: if you have a hero image file, replace the background or <img> here -->
-                <div class="hero-image" role="img" aria-label="Hero image placeholder"></div>
-
-                <!-- Provided logo displayed alongside the hero image -->
-                <img src="assets/logo.png" alt="KUNO15 Logo" class="hero-logo">
+    <!-- HERO WRAPPER: includes side-by-side logo + hero image and the main nav below it -->
+    <div class="hero-wrapper" id="home-hero">
+        <div class="hero-header">
+            <div class="hero-image" role="img" aria-label="Hero image">
+                <!-- background image set via CSS (assets/hero.jpg) -->
             </div>
 
-            <div class="hero-text">
-                <p>HIER TRIFFT LOCKERE KIEZATMOSPHÄRE</p>
-                <p>AUF FEINEN KAFFEE, LECKERE SNACKS UND HOCHWERTIGES EIS AUS HAUSEIGENER MANUFAKTUR.</p>
-                <p>BEI UNS KOMMEN JUNG UND ALT ZUSAMMEN,</p>
-                <p>UM "NE JUTE ZEIT" ZU HABEN.</p>
-                
-                <div class="welcome-section">
-                    <p>GANZ ENTSPANNT</p>
-                    <p>UND</p>
-                    <p>OHNE VIEL TAMTAM</p>
-                    <p>IS</p>
-                    <p>EVERYBODY WELCOME!</p>
-                </div>
-                
-                <p>HOL DIR DEINEN "LITTLE TASTE OF KIEZ"!</p>
+            <div class="logo-block" aria-hidden="false">
+                <!-- primary logo asset (assets/logo.png) -->
+                <img src="assets/logo.png" alt="KUNO15 Logo" class="primary-logo">
             </div>
         </div>
-    </section>
 
-    <section class="section">
-        <div class="container">
-            <div class="image-placeholder">
-                EINGANG (Bild hier einfügen)
-            </div>
-        </div>
-    </section>
+        <nav class="main-nav" aria-label="Hauptnavigation">
+            <ul class="nav-menu">
+                <li><a href="#getranke">Getränke</a></li>
+                <li><a href="#speisen">Speisen</a></li>
+                <li><a href="#mittagstisch">Mittagstisch</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="about.html">Über uns</a></li>
+            </ul>
+        </nav>
+    </div>
 
-    <section id="getranke" class="section">
-        <div class="container">
-            <h2 class="section-title">Getränke</h2>
-            <div class="two-column">
-                <div>
-                    <!-- Removed the image placeholder from the Getränke section as requested -->
-                    <div class="price-section">
-                        <h3>ALL UNSERE GETRÄNKE GIBT ES WAHLWEISE MIT BIO-KUHMILCH, HAFER-ODER SOJAMILCH</h3>
-                        <table class="price-table">
-                            <tr><td>ESPRESSO / DOPPIO</td><td>2.40 / 3.40</td></tr>
-                            <tr><td>ESPRESSO MACCHIATO</td><td>3.00</td></tr>
-                            <tr><td>DOPPIO MACCHIATO</td><td>3.80</td></tr>
-                            <tr><td>AMERICANO</td><td>3.00</td></tr>
-                            <tr><td>FILTER</td><td>3.00</td></tr>
-                            <tr><td>CAPPUCCINO</td><td>3.60 / 4.20</td></tr>
-                            <tr><td>FLAT WHITE</td><td>4.00</td></tr>
-                            <tr><td>CAFFE LATTE</td><td>4.20</td></tr>
-                            <tr><td>MATCHA</td><td>4.00</td></tr>
-                            <tr><td>RIO CHAI</td><td>4.50</td></tr>
-                            <tr><td>KAKAO</td><td>3.50</td></tr>
-                            <tr><td>HAFEE/SOJA</td><td>0.30</td></tr>
-                            <tr><td>TEE DIV. SORTEN</td><td>3.50</td></tr>
-                            <tr><td>FRISCHER TEE</td><td>4.00</td></tr>
-                        </table>
+    <main>
+        <section class="section intro-section">
+            <div class="container">
+                <div class="hero-text">
+                    <p>HIER TRIFFT LOCKERE KIEZATMOSPHÄRE</p>
+                    <p>AUF FEINEN KAFFEE, LECKERE SNACKS UND HOCHWERTIGES EIS AUS HAUSEIGENER MANUFAKTUR.</p>
+                    <p>BEI UNS KOMMEN JUNG UND ALT ZUSAMMEN,</p>
+                    <p>UM "NE JUTE ZEIT" ZU HABEN.</p>
+
+                    <div class="welcome-section">
+                        <p>GANZ ENTSPANNT</p>
+                        <p>UND</p>
+                        <p>OHNE VIEL TAMTAM</p>
+                        <p>IS</p>
+                        <p>EVERYBODY WELCOME!</p>
                     </div>
+
+                    <p>HOL DIR DEINEN "LITTLE TASTE OF KIEZ"!</p>
                 </div>
-                <div>
-                    <div class="price-section">
-                        <h3>SOFT DRINKS & WINTERGETRÄNKE</h3>
-                        <table class="price-table">
-                            <tr><td>GOLDENE MILCH WÜRZIG/SÜSS</td><td>4.00</td></tr>
-                            <tr><td>HAUSGEMACHTER PUMPKIN SPICE LATTE</td><td>4.50</td></tr>
-                            <tr><td>AFFOGATO VANILLE/KARAMELL</td><td>4.30</td></tr>
-                        </table>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="image-placeholder">
+                    EINGANG (Bild hier einfügen)
+                </div>
+            </div>
+        </section>
+
+        <section id="getranke" class="section">
+            <div class="container">
+                <h2 class="section-title">Getränke</h2>
+                <div class="two-column">
+                    <div>
+                        <div class="price-section">
+                            <h3>ALL UNSERE GETRÄNKE GIBT ES WAHLWEISE MIT BIO-KUHMILCH, HAFER-ODER SOJAMILCH</h3>
+                            <table class="price-table">
+                                <tr><td>ESPRESSO / DOPPIO</td><td>2.40 / 3.40</td></tr>
+                                <tr><td>ESPRESSO MACCHIATO</td><td>3.00</td></tr>
+                                <tr><td>DOPPIO MACCHIATO</td><td>3.80</td></tr>
+                                <tr><td>AMERICANO</td><td>3.00</td></tr>
+                                <tr><td>FILTER</td><td>3.00</td></tr>
+                                <tr><td>CAPPUCCINO</td><td>3.60 / 4.20</td></tr>
+                                <tr><td>FLAT WHITE</td><td>4.00</td></tr>
+                                <tr><td>CAFFE LATTE</td><td>4.20</td></tr>
+                                <tr><td>MATCHA</td><td>4.00</td></tr>
+                                <tr><td>RIO CHAI</td><td>4.50</td></tr>
+                                <tr><td>KAKAO</td><td>3.50</td></tr>
+                                <tr><td>HAFEE/SOJA</td><td>0.30</td></tr>
+                                <tr><td>TEE DIV. SORTEN</td><td>3.50</td></tr>
+                                <tr><td>FRISCHER TEE</td><td>4.00</td></tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="price-section">
+                            <h3>SOFT DRINKS & WINTERGETRÄNKE</h3>
+                            <table class="price-table">
+                                <tr><td>GOLDENE MILCH WÜRZIG/SÜSS</td><td>4.00</td></tr>
+                                <tr><td>HAUSGEMACHTER PUMPKIN SPICE LATTE</td><td>4.50</td></tr>
+                                <tr><td>AFFOGATO VANILLE/KARAMELL</td><td>4.30</td></tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="speisen" class="section">
-        <div class="container">
-            <h2 class="section-title">Speisen</h2>
-            <div class="two-column">
-                <div>
-                    <div class="price-section">
-                        <h3>FRÜHSTÜCK & SNACKS</h3>
-                        <table class="price-table">
-                            <tr><td>BUTTERCROISSANT</td><td>2.30</td></tr>
-                            <tr><td>PAIN AU CHOCOLAT</td><td>2.50</td></tr>
-                            <tr><td>PISTAZIEN- ODER APRIKOSENCROISSANT (V)</td><td>3.20</td></tr>
-                            <tr><td>CARAMELMUFFIN</td><td>3.50</td></tr>
-                            <tr><td>HAFERSCHNITTE</td><td>2.80</td></tr>
-                            <tr><td>PASTEL DE NATA</td><td>2.80</td></tr>
-                            <tr><td>ZIMTSCHNECKE</td><td>3.40</td></tr>
-                            <tr><td>BANANENBROT</td><td>3.80</td></tr>
-                            <tr><td>DINKELKÄSEBROT</td><td>3.90</td></tr>
-                            <tr><td>LAUGENSTANGE MIT BRIE</td><td>3.90</td></tr>
-                            <tr><td>VEGANES DINKELCROISSANT</td><td>3.90</td></tr>
-                        </table>
+        <section id="speisen" class="section">
+            <div class="container">
+                <h2 class="section-title">Speisen</h2>
+                <div class="two-column">
+                    <div>
+                        <div class="price-section">
+                            <h3>FRÜHSTÜCK & SNACKS</h3>
+                            <table class="price-table">
+                                <tr><td>BUTTERCROISSANT</td><td>2.30</td></tr>
+                                <tr><td>PAIN AU CHOCOLAT</td><td>2.50</td></tr>
+                                <tr><td>PISTAZIEN- ODER APRIKOSENCROISSANT (V)</td><td>3.20</td></tr>
+                                <tr><td>CARAMELMUFFIN</td><td>3.50</td></tr>
+                                <tr><td>HAFERSCHNITTE</td><td>2.80</td></tr>
+                                <tr><td>PASTEL DE NATA</td><td>2.80</td></tr>
+                                <tr><td>ZIMTSCHNECKE</td><td>3.40</td></tr>
+                                <tr><td>BANANENBROT</td><td>3.80</td></tr>
+                                <tr><td>DINKELKÄSEBROT</td><td>3.90</td></tr>
+                                <tr><td>LAUGENSTANGE MIT BRIE</td><td>3.90</td></tr>
+                                <tr><td>VEGANES DINKELCROISSANT</td><td>3.90</td></tr>
+                            </table>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div class="price-section">
-                        <h3>FRISCHE SALATE</h3>
-                        <table class="price-table">
-                            <tr><td>KIEZ GRÜN</td><td>6.50</td></tr>
-                            <tr><td>ORIENT FUSION</td><td>6.50</td></tr>
-                        </table>
+                    <div>
+                        <div class="price-section">
+                            <h3>FRISCHE SALATE</h3>
+                            <table class="price-table">
+                                <tr><td>KIEZ GRÜN</td><td>6.50</td></tr>
+                                <tr><td>ORIENT FUSION</td><td>6.50</td></tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="mittagstisch" class="section">
-        <div class="container">
-            <h2 class="section-title">Mittagstisch</h2>
-            <div class="two-column">
-                <div>
-                    <div class="image-placeholder">
-                        KNÖDEL (Bild hier einfügen)
+        <section id="mittagstisch" class="section">
+            <div class="container">
+                <h2 class="section-title">Mittagstisch</h2>
+                <div class="two-column">
+                    <div>
+                        <div class="image-placeholder">
+                            KNÖDEL (Bild hier einfügen)
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div class="price-section">
-                        <h3>KNÖDEL, KLINGT KOMISCH, SCHMECKT ABER</h3>
-                        <p style="text-align: left; margin: 2rem 0; font-weight: bold;">MO – FR VON 12 – 16 UHR</p>
-                        <table class="price-table">
-                            <tr>
-                                <td>HANDGEROLLTE SEMMEL-KNÖDEL<br>HAUSGEMACHTES ALT-WIENER RINDERGULASCH,<br>DRY AGED RUCOLA, KÜRBISKERNÖL</td>
-                                <td>15.70</td>
-                            </tr>
-                            <tr>
-                                <td>HANDGEROLLTE SPINATKNÖDEL<br>GEKLÄRTE SALBEIBUTTER<br>PARMESAN RUCOLA, KÜRBISKERNÖL</td>
-                                <td>10.70</td>
-                            </tr>
-                        </table>
-                        <p style="text-align: left; margin: 2rem 0; font-weight: bold;">MO – SO VON 12 – 16 UHR</p>
-                        <table class="price-table">
-                            <tr>
-                                <td>WECHSELNDE TAGESSUPPEN</td>
-                                <td>AB 5.80</td>
-                            </tr>
-                        </table>
+                    <div>
+                        <div class="price-section">
+                            <h3>KNÖDEL, KLINGT KOMISCH, SCHMECKT ABER</h3>
+                            <p style="text-align: left; margin: 2rem 0; font-weight: bold;">MO – FR VON 12 – 16 UHR</p>
+                            <table class="price-table">
+                                <tr>
+                                    <td>HANDGEROLLTE SEMMEL-KNÖDEL<br>HAUSGEMACHTES ALT-WIENER RINDERGULASCH,<br>DRY AGED RUCOLA, KÜRBISKERNÖL</td>
+                                    <td>15.70</td>
+                                </tr>
+                                <tr>
+                                    <td>HANDGEROLLTE SPINATKNÖDEL<br>GEKLÄRTE SALBEIBUTTER<br>PARMESAN RUCOLA, KÜRBISKERNÖL</td>
+                                    <td>10.70</td>
+                                </tr>
+                            </table>
+                            <p style="text-align: left; margin: 2rem 0; font-weight: bold;">MO – SO VON 12 – 16 UHR</p>
+                            <table class="price-table">
+                                <tr>
+                                    <td>WECHSELNDE TAGESSUPPEN</td>
+                                    <td>AB 5.80</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="kontakt" class="section">
-        <div class="container">
-            <h2 class="section-title">Besuchen Sie uns</h2>
-            <div class="two-column">
-                <div class="contact-info">
-                    <h3>Öffnungszeiten</h3>
-                    <p>Montag - Sonntag: 8:00 - 18:00 Uhr</p>
-                    <p>Mittagstisch: Mo-Fr 12:00 - 16:00 Uhr</p>
-                </div>
-                <div class="contact-info">
-                    <h3>Kontakt</h3>
-                    <p>KUNO15</p>
-                    <p>Adresse: [Ihre Adresse hier]</p>
-                    <p>Telefon: [Ihre Telefonnummer]</p>
-                    <p>Email: [Ihre Email]</p>
+        <section id="kontakt" class="section">
+            <div class="container">
+                <h2 class="section-title">Besuchen Sie uns</h2>
+                <div class="two-column">
+                    <div class="contact-info">
+                        <h3>Öffnungszeiten</h3>
+                        <p>Montag - Sonntag: 8:00 - 18:00 Uhr</p>
+                        <p>Mittagstisch: Mo-Fr 12:00 - 16:00 Uhr</p>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Kontakt</h3>
+                        <p>KUNO15</p>
+                        <p>Adresse: [Ihre Adresse hier]</p>
+                        <p>Telefon: [Ihre Telefonnummer]</p>
+                        <p>Email: [Ihre Email]</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
