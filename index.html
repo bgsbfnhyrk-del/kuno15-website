@@ -17,21 +17,24 @@
             line-height: 1.6;
             color: #000;
             background: #fff;
-            overflow-x: hidden;
+            overflow: hidden;
             height: 100vh;
+            width: 100vw;
         }
 
-        .container {
-            max-width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Header Section - Side by Side Layout */
-        .header-section {
+        .full-screen-composition {
+            height: 100vh;
+            width: 100vw;
             display: flex;
-            height: 70vh;
+            flex-direction: column;
+        }
+
+        /* Main Content Area - Logo and Hero Image */
+        .main-content {
+            flex: 1;
+            display: flex;
             width: 100%;
+            height: calc(100vh - 80px); /* Full height minus navigation */
         }
 
         .logo-container {
@@ -58,12 +61,6 @@
             border-left: 1px solid #000;
         }
 
-        .hero-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
         .image-placeholder {
             width: 100%;
             height: 100%;
@@ -76,19 +73,34 @@
             border: 1px solid #000;
         }
 
-        /* Navigation Menu */
-        .nav-menu {
-            display: flex;
-            justify-content: center;
+        /* Bottom Navigation Menu */
+        .bottom-navigation {
+            height: 80px;
             width: 100%;
             background: #000;
-            padding: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            justify-content: space-between;
+            padding: 0 2rem;
         }
 
         .nav-menu ul {
             list-style: none;
             display: flex;
-            gap: 4rem;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .nav-menu li {
+            flex: 1;
+            text-align: center;
         }
 
         .nav-menu a {
@@ -99,64 +111,25 @@
             letter-spacing: 2px;
             font-weight: bold;
             transition: color 0.3s;
+            display: block;
+            padding: 1rem 0.5rem;
         }
 
         .nav-menu a:hover {
             color: #ccc;
-        }
-
-        /* Content Sections */
-        .content-section {
-            padding: 4rem 2rem;
-            border-bottom: 1px solid #000;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            margin-bottom: 3rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-align: center;
-        }
-
-        .hero-text {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .hero-text p {
-            margin: 1.5rem 0;
-            font-size: 1.2rem;
-            line-height: 1.8;
-        }
-
-        .welcome-section {
-            margin: 3rem 0;
-            padding: 2rem 0;
-            border-top: 1px solid #000;
-            border-bottom: 1px solid #000;
-        }
-
-        /* Footer */
-        .footer {
-            background: #000;
-            color: #fff;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 4rem;
+            background: rgba(255, 255, 255, 0.1);
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .header-section {
+            .main-content {
                 flex-direction: column;
-                height: auto;
+                height: calc(100vh - 120px);
             }
             
             .logo-container, .hero-image-container {
                 flex: none;
-                height: 50vh;
+                height: 50%;
             }
             
             .hero-image-container {
@@ -164,22 +137,41 @@
                 border-top: 1px solid #000;
             }
             
+            .bottom-navigation {
+                height: 120px;
+            }
+            
             .nav-menu ul {
                 flex-direction: column;
-                gap: 1.5rem;
-                text-align: center;
+                gap: 0.5rem;
+            }
+            
+            .nav-menu a {
+                padding: 0.5rem;
+                font-size: 0.9rem;
             }
             
             .logo {
                 max-width: 300px;
             }
         }
+
+        @media (max-width: 480px) {
+            .bottom-navigation {
+                height: 140px;
+            }
+            
+            .nav-menu a {
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section with Logo and Hero Image Side by Side -->
-        <section class="header-section">
+    <div class="full-screen-composition">
+        <!-- Main Content Area - Logo and Hero Image Side by Side -->
+        <section class="main-content">
             <div class="logo-container">
                 <div class="logo">
                     <svg viewBox="0 0 382 677" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
@@ -204,42 +196,32 @@
             </div>
         </section>
 
-        <!-- Full Width Navigation Menu -->
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="index.html">Startseite</a></li>
-                <li><a href="uber-uns.html">Über uns</a></li>
-                <li><a href="getranke.html">Getränke</a></li>
-                <li><a href="speisen.html">Speisen</a></li>
-                <li><a href="mittagstisch.html">Mittagstisch</a></li>
-                <li><a href="kontakt.html">Kontakt</a></li>
-            </ul>
-        </nav>
-
-        <!-- Hero Text Section -->
-        <section class="content-section">
-            <div class="hero-text">
-                <p>HIER TRIFFT LOCKERE KIEZATMOSPHÄRE</p>
-                <p>AUF FEINEN KAFFEE, LECKERE SNACKS UND HOCHWERTIGES EIS AUS HAUSEIGENER MANUFAKTUR.</p>
-                <p>BEI UNS KOMMEN JUNG UND ALT ZUSAMMEN,</p>
-                <p>UM "NE JUTE ZEIT" ZU HABEN.</p>
-                
-                <div class="welcome-section">
-                    <p>GANZ ENTSPANNT</p>
-                    <p>UND</p>
-                    <p>OHNE VIEL TAMTAM</p>
-                    <p>IS</p>
-                    <p>EVERYBODY WELCOME!</p>
-                </div>
-                
-                <p>HOL DIR DEINEN "LITTLE TASTE OF KIEZ"!</p>
+        <!-- Bottom Navigation Menu -->
+        <nav class="bottom-navigation">
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="uber-uns.html">Über uns</a></li>
+                    <li><a href="getranke.html">Getränke</a></li>
+                    <li><a href="speisen.html">Speisen</a></li>
+                    <li><a href="mittagstisch.html">Mittagstisch</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
             </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>&copy; 2023 KUNO15. Alle Rechte vorbehalten.</p>
-        </footer>
+        </nav>
     </div>
+
+    <script>
+        // Ensure the composition always fills the viewport
+        function adjustLayout() {
+            const composition = document.querySelector('.full-screen-composition');
+            composition.style.height = window.innerHeight + 'px';
+            composition.style.width = window.innerWidth + 'px';
+        }
+
+        // Adjust on load and resize
+        window.addEventListener('load', adjustLayout);
+        window.addEventListener('resize', adjustLayout);
+    </script>
 </body>
 </html>
