@@ -149,6 +149,13 @@
             text-align: left;
         }
 
+        /* Single Column Layout for Text-Only Sections */
+        .single-column {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
         /* Price Tables */
         .price-table {
             width: 100%;
@@ -258,6 +265,7 @@
         <!-- Full Width Navigation Menu -->
         <nav class="nav-menu">
             <ul>
+                <li><a href="#uber-uns">Über uns</a></li>
                 <li><a href="#getranke">Getränke</a></li>
                 <li><a href="#speisen">Speisen</a></li>
                 <li><a href="#mittagstisch">Mittagstisch</a></li>
@@ -265,8 +273,8 @@
             </ul>
         </nav>
 
-        <!-- Hero Text Section -->
-        <section class="content-section">
+        <!-- Hero Text Section with anchor for Über uns -->
+        <section id="uber-uns" class="content-section">
             <div class="hero-text">
                 <p>HIER TRIFFT LOCKERE KIEZATMOSPHÄRE</p>
                 <p>AUF FEINEN KAFFEE, LECKERE SNACKS UND HOCHWERTIGES EIS AUS HAUSEIGENER MANUFAKTUR.</p>
@@ -285,48 +293,109 @@
             </div>
         </section>
 
-        <!-- Getränke Section -->
+        <!-- Getränke Section - Text Only -->
         <section id="getranke" class="content-section">
             <div class="container">
                 <h2 class="section-title">Getränke</h2>
                 
-                <div class="two-column">
-                    <div>
-                        <div class="image-placeholder" style="height: 400px;">
-                            TASSE ROSE NOUGAT CROISSANT (Bild)
-                        </div>
+                <div class="single-column">
+                    <div class="price-section">
+                        <h3>ALL UNSERE GETRÄNKE GIBT ES WAHLWEISE MIT BIO-KUHMILCH, HAFER-ODER SOJAMILCH</h3>
+                        
+                        <table class="price-table">
+                            <tr><td>ESPRESSO / DOPPIO</td><td>2.40 / 3.40</td></tr>
+                            <tr><td>ESPRESSO MACCHIATO</td><td>3.00</td></tr>
+                            <tr><td>DOPPIO MACCHIATO</td><td>3.80</td></tr>
+                            <tr><td>AMERICANO</td><td>3.00</td></tr>
+                            <tr><td>FILTER</td><td>3.00</td></tr>
+                            <tr><td>CAPPUCCINO</td><td>3.60 / 4.20</td></tr>
+                            <tr><td>FLAT WHITE</td><td>4.00</td></tr>
+                            <tr><td>CAFFE LATTE</td><td>4.20</td></tr>
+                            <tr><td>MATCHA</td><td>4.00</td></tr>
+                            <tr><td>RIO CHAI</td><td>4.50</td></tr>
+                            <tr><td>KAKAO</td><td>3.50</td></tr>
+                            <tr><td>HAFEE/SOJA</td><td>0.30</td></tr>
+                            <tr><td>TEE DIV. SORTEN</td><td>3.50</td></tr>
+                            <tr><td>FRISCHER TEE</td><td>4.00</td></tr>
+                        </table>
+                    </div>
+
+                    <div class="price-section">
+                        <h3>SOFT DRINKS & WINTERGETRÄNKE</h3>
+                        <table class="price-table">
+                            <tr><td>GOLDENE MILCH WÜRZIG/SÜSS</td><td>4.00</td></tr>
+                            <tr><td>HAUSGEMACHTER PUMPKIN SPICE LATTE</td><td>4.50</td></tr>
+                            <tr><td>AFFOGATO VANILLE/KARAMELL</td><td>4.30</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speisen Section -->
+        <section id="speisen" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Speisen</h2>
+                
+                <div class="single-column">
+                    <div class="price-section">
+                        <h3>FRÜHSTÜCK & SNACKS</h3>
+                        <table class="price-table">
+                            <tr><td>BUTTERCROISSANT</td><td>2.30</td></tr>
+                            <tr><td>PAIN AU CHOCOLAT</td><td>2.50</td></tr>
+                            <tr><td>PISTAZIEN- ODER APRIKOSENCROISSANT (V)</td><td>3.20</td></tr>
+                            <tr><td>CARAMELMUFFIN</td><td>3.50</td></tr>
+                            <tr><td>HAFERSCHNITTE</td><td>2.80</td></tr>
+                            <tr><td>PASTEL DE NATA</td><td>2.80</td></tr>
+                            <tr><td>ZIMTSCHNECKE</td><td>3.40</td></tr>
+                            <tr><td>BANANENBROT</td><td>3.80</td></tr>
+                            <tr><td>DINKELKÄSEBROT</td><td>3.90</td></tr>
+                            <tr><td>LAUGENSTANGE MIT BRIE</td><td>3.90</td></tr>
+                            <tr><td>VEGANES DINKELCROISSANT</td><td>3.90</td></tr>
+                        </table>
                     </div>
                     
-                    <div>
-                        <div class="price-section">
-                            <h3>ALL UNSERE GETRÄNKE GIBT ES WAHLWEISE MIT BIO-KUHMILCH, HAFER-ODER SOJAMILCH</h3>
-                            
-                            <table class="price-table">
-                                <tr><td>ESPRESSO / DOPPIO</td><td>2.40 / 3.40</td></tr>
-                                <tr><td>ESPRESSO MACCHIATO</td><td>3.00</td></tr>
-                                <tr><td>DOPPIO MACCHIATO</td><td>3.80</td></tr>
-                                <tr><td>AMERICANO</td><td>3.00</td></tr>
-                                <tr><td>FILTER</td><td>3.00</td></tr>
-                                <tr><td>CAPPUCCINO</td><td>3.60 / 4.20</td></tr>
-                                <tr><td>FLAT WHITE</td><td>4.00</td></tr>
-                                <tr><td>CAFFE LATTE</td><td>4.20</td></tr>
-                                <tr><td>MATCHA</td><td>4.00</td></tr>
-                                <tr><td>RIO CHAI</td><td>4.50</td></tr>
-                                <tr><td>KAKAO</td><td>3.50</td></tr>
-                                <tr><td>HAFEE/SOJA</td><td>0.30</td></tr>
-                                <tr><td>TEE DIV. SORTEN</td><td>3.50</td></tr>
-                                <tr><td>FRISCHER TEE</td><td>4.00</td></tr>
-                            </table>
-                        </div>
+                    <div class="price-section">
+                        <h3>FRISCHE SALATE</h3>
+                        <table class="price-table">
+                            <tr><td>KIEZ GRÜN</td><td>6.50</td></tr>
+                            <tr><td>ORIENT FUSION</td><td>6.50</td></tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                        <div class="price-section">
-                            <h3>SOFT DRINKS & WINTERGETRÄNKE</h3>
-                            <table class="price-table">
-                                <tr><td>GOLDENE MILCH WÜRZIG/SÜSS</td><td>4.00</td></tr>
-                                <tr><td>HAUSGEMACHTER PUMPKIN SPICE LATTE</td><td>4.50</td></tr>
-                                <tr><td>AFFOGATO VANILLE/KARAMELL</td><td>4.30</td></tr>
-                            </table>
-                        </div>
+        <!-- Mittagstisch Section - Text Only -->
+        <section id="mittagstisch" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Mittagstisch</h2>
+                
+                <div class="single-column">
+                    <div class="price-section">
+                        <h3>KNÖDEL, KLINGT KOMISCH, SCHMECKT ABER</h3>
+                        
+                        <p style="text-align: left; margin: 2rem 0; font-weight: bold;">MO – FR VON 12 –16 UHR</p>
+                        
+                        <table class="price-table">
+                            <tr>
+                                <td>HANDGEROLLTE SEMMEL-KNÖDEL<br>HAUSGEMACHTES ALT-WIENER RINDERGULASCH,<br>DRY AGED RUCOLA, KÜRBISKERNÖL</td>
+                                <td>15.70</td>
+                            </tr>
+                            <tr>
+                                <td>HANDGEROLLTE SPINATKNÖDEL<br>GEKLÄRTE SALBEIBUTTER<br>PARMESAN RUCOLA, KÜRBISKERNÖL</td>
+                                <td>10.70</td>
+                            </tr>
+                        </table>
+                        
+                        <p style="text-align: left; margin: 2rem 0; font-weight: bold;">MO – SO VON 12 – 16 UHR</p>
+                        
+                        <table class="price-table">
+                            <tr>
+                                <td>WECHSELNDE TAGESSUPPEN</td>
+                                <td>AB 5.80</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -371,8 +440,5 @@
             });
         });
     </script>
-</body>
-</html>
-    <script src="script.js"></script>
 </body>
 </html>
