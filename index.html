@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="header">
-        <div class="container">
+        <div class="container header-inner">
             <div class="logo">
                 <svg viewBox="0 0 382 677">
                     <g transform="matrix(1,0,0,1,-134.548,-142.391)">
@@ -31,17 +31,27 @@
                     <li><a href="#speisen">Speisen</a></li>
                     <li><a href="#mittagstisch">Mittagstisch</a></li>
                     <li><a href="#kontakt">Kontakt</a></li>
+                    <li><a href="about.html">Über uns</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
+    <section class="hero" id="home-hero">
+        <div class="container hero-grid">
+            <div class="hero-media">
+                <!-- Primary hero image: if you have a hero image file, replace the background or <img> here -->
+                <div class="hero-image" role="img" aria-label="Hero image placeholder"></div>
+
+                <!-- Provided logo displayed alongside the hero image -->
+                <img src="assets/logo.png" alt="KUNO15 Logo" class="hero-logo">
+            </div>
+
             <div class="hero-text">
                 <p>HIER TRIFFT LOCKERE KIEZATMOSPHÄRE</p>
                 <p>AUF FEINEN KAFFEE, LECKERE SNACKS UND HOCHWERTIGES EIS AUS HAUSEIGENER MANUFAKTUR.</p>
-                <p>BEI UNS KOMMEN JUNG UND ALT ZUSAMMEN,</p>
+                <p>BEI UNS KOMMEN JUNG UND ALT ZUSAMMEN,
+                </p>
                 <p>UM "NE JUTE ZEIT" ZU HABEN.</p>
                 
                 <div class="welcome-section">
@@ -70,11 +80,7 @@
             <h2 class="section-title">Getränke</h2>
             <div class="two-column">
                 <div>
-                    <div class="image-placeholder">
-                        TASSE ROSE NOUGAT CROISSANT (Bild)
-                    </div>
-                </div>
-                <div>
+                    <!-- Removed the image placeholder from the Getränke section as requested -->
                     <div class="price-section">
                         <h3>ALL UNSERE GETRÄNKE GIBT ES WAHLWEISE MIT BIO-KUHMILCH, HAFER-ODER SOJAMILCH</h3>
                         <table class="price-table">
@@ -94,6 +100,8 @@
                             <tr><td>FRISCHER TEE</td><td>4.00</td></tr>
                         </table>
                     </div>
+                </div>
+                <div>
                     <div class="price-section">
                         <h3>SOFT DRINKS & WINTERGETRÄNKE</h3>
                         <table class="price-table">
@@ -154,7 +162,7 @@
                 <div>
                     <div class="price-section">
                         <h3>KNÖDEL, KLINGT KOMISCH, SCHMECKT ABER</h3>
-                        <p style="text-align: left; margin: 2rem 0; font-weight: bold;">MO – FR VON 12 –16 UHR</p>
+                        <p style="text-align: left; margin: 2rem 0; font-weight: bold;">MO – FR VON 12 – 16 UHR</p>
                         <table class="price-table">
                             <tr>
                                 <td>HANDGEROLLTE SEMMEL-KNÖDEL<br>HAUSGEMACHTES ALT-WIENER RINDERGULASCH,<br>DRY AGED RUCOLA, KÜRBISKERNÖL</td>
