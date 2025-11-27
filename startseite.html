@@ -39,29 +39,25 @@
             width: 100%;
             height: calc(100vh - 80px);
             align-items: center;
-            justify-content: center; /* Centrado general */
+            justify-content: flex-start; /* Cambiado a inicio para izquierda */
+            padding-left: 10%; /* Padding para desplazar desde izquierda */
         }
 
         .content-wrapper {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 3rem; /* Espacio controlado entre logo y foto */
-            max-width: 900px;
-            width: 100%;
-            margin-left: 8%; /* Desplazado a la izquierda */
+            gap: 4rem; /* Espacio entre logo y foto */
         }
 
         .logo-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #fff;
         }
 
         .logo {
-            width: 100%;
-            max-width: 250px; /* Tamaño optimizado */
+            width: 280px; /* Tamaño fijo para asegurar visibilidad */
             height: auto;
         }
 
@@ -69,20 +65,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #fff;
         }
 
         .hero-image-wrapper {
-            width: 100%;
-            max-width: 400px; /* Tamaño optimizado */
-            height: auto;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .hero-image {
-            width: 100%;
+            width: 400px; /* Tamaño fijo */
             height: auto;
             max-height: 60vh;
             object-fit: contain;
@@ -140,25 +132,21 @@
             .main-visual {
                 flex-direction: column;
                 height: calc(100vh - 120px);
+                justify-content: center;
+                padding-left: 0;
             }
             
             .content-wrapper {
                 flex-direction: column;
                 gap: 2rem;
-                margin-left: 0;
-                max-width: 100%;
             }
             
-            .logo-container, .hero-image-container {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            .hero-image-wrapper {
-                max-width: 350px;
+            .logo {
+                width: 200px;
             }
             
             .hero-image {
+                width: 300px;
                 max-height: 35vh;
             }
             
@@ -175,10 +163,6 @@
                 padding: 0.5rem;
                 font-size: 0.9rem;
             }
-            
-            .logo {
-                max-width: 200px;
-            }
         }
 
         @media (max-width: 480px) {
@@ -192,19 +176,12 @@
             }
             
             .logo {
-                max-width: 160px;
-            }
-            
-            .hero-image-wrapper {
-                max-width: 280px;
+                width: 160px;
             }
             
             .hero-image {
+                width: 250px;
                 max-height: 30vh;
-            }
-            
-            .content-wrapper {
-                gap: 1.5rem;
             }
         }
     </style>
