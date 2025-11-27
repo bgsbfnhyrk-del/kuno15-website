@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KUNO15 - Little Taste of Kiez</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+New&display=swap">
     <style>
         * {
             margin: 0;
@@ -12,9 +11,13 @@
             box-sizing: border-box;
         }
 
+        @font-face {
+            font-family: 'Andale Mono';
+            src: local('Andale Mono'), local('AndaleMono');
+        }
+
         body {
-            font-family: 'Courier New', monospace;
-            line-height: 1.6;
+            font-family: 'Andale Mono', 'Courier New', monospace;
             color: #000;
             background: #fff;
             overflow: hidden;
@@ -47,7 +50,7 @@
 
         .logo {
             width: 100%;
-            max-width: 500px;
+            max-width: 300px; /* Reduced from 500px */
             height: auto;
         }
 
@@ -145,7 +148,7 @@
             }
             
             .logo {
-                max-width: 300px;
+                max-width: 200px; /* Smaller for mobile */
             }
         }
 
@@ -157,6 +160,10 @@
             .nav-menu a {
                 font-size: 0.8rem;
                 letter-spacing: 1px;
+            }
+            
+            .logo {
+                max-width: 150px; /* Even smaller for very small screens */
             }
         }
     </style>
@@ -174,9 +181,9 @@
                                 <path d="M484,171L484,654L162,654L162,171L484,171ZM475.615,177.534L170.385,177.534L170.385,647.466L475.615,647.466L475.615,177.534Z"/>
                             </g>
                             <g transform="matrix(1,0,0,1,-49.6429,73)">
-                                <text x="248.84px" y="282.244px" style="font-family:'Courier New',monospace;font-size:200px;fill:#000000;">KU</text>
-                                <text x="248.84px" y="482.244px" style="font-family:'Courier New',monospace;font-size:200px;fill:#000000;">NO</text>
-                                <text x="248.84px" y="682.244px" style="font-family:'Courier New',monospace;font-size:200px;fill:#000000;">15</text>
+                                <text x="248.84px" y="282.244px" style="font-family:'Andale Mono',monospace;font-size:200px;fill:#000000;">KU</text>
+                                <text x="248.84px" y="482.244px" style="font-family:'Andale Mono',monospace;font-size:200px;fill:#000000;">NO</text>
+                                <text x="248.84px" y="682.244px" style="font-family:'Andale Mono',monospace;font-size:200px;fill:#000000;">15</text>
                             </g>
                         </g>
                     </svg>
