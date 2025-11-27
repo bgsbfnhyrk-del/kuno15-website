@@ -39,38 +39,42 @@
             width: 100%;
             height: calc(100vh - 80px);
             align-items: center;
+            justify-content: center; /* Centrado general */
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 0; /* Eliminado el espacio entre logo y foto */
+            gap: 3rem; /* Espacio controlado entre logo y foto */
+            max-width: 900px;
+            width: 100%;
+            margin-left: 8%; /* Desplazado a la izquierda */
         }
 
         .logo-container {
-            flex: 1;
             display: flex;
             align-items: center;
-            justify-content: flex-end; /* Alinea el logo a la derecha */
+            justify-content: center;
             background: #fff;
-            padding-right: 2rem; /* Espacio desde el borde derecho */
         }
 
         .logo {
             width: 100%;
-            max-width: 280px; /* Ligeramente más pequeño */
+            max-width: 250px; /* Tamaño optimizado */
             height: auto;
         }
 
         .hero-image-container {
-            flex: 1;
-            background: #fff;
             display: flex;
             align-items: center;
-            justify-content: flex-start; /* Alinea la foto a la izquierda */
-            padding-left: 2rem; /* Espacio desde el borde izquierdo */
-            /* border-left: 1px solid #000;  LÍNEA ELIMINADA */
+            justify-content: center;
+            background: #fff;
         }
 
         .hero-image-wrapper {
             width: 100%;
-            max-width: 450px; /* Un poco más pequeño */
+            max-width: 400px; /* Tamaño optimizado */
             height: auto;
             display: flex;
             align-items: center;
@@ -80,7 +84,7 @@
         .hero-image {
             width: 100%;
             height: auto;
-            max-height: 65vh;
+            max-height: 60vh;
             object-fit: contain;
         }
 
@@ -136,14 +140,18 @@
             .main-visual {
                 flex-direction: column;
                 height: calc(100vh - 120px);
-                gap: 1rem;
+            }
+            
+            .content-wrapper {
+                flex-direction: column;
+                gap: 2rem;
+                margin-left: 0;
+                max-width: 100%;
             }
             
             .logo-container, .hero-image-container {
-                flex: none;
-                height: 45%;
+                width: 100%;
                 justify-content: center;
-                padding: 0;
             }
             
             .hero-image-wrapper {
@@ -169,7 +177,7 @@
             }
             
             .logo {
-                max-width: 180px;
+                max-width: 200px;
             }
         }
 
@@ -184,7 +192,7 @@
             }
             
             .logo {
-                max-width: 140px;
+                max-width: 160px;
             }
             
             .hero-image-wrapper {
@@ -194,6 +202,10 @@
             .hero-image {
                 max-height: 30vh;
             }
+            
+            .content-wrapper {
+                gap: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -201,27 +213,29 @@
     <div class="full-screen-composition">
         <!-- Main Visual Content - Logo and Hero Image Side by Side -->
         <section class="main-visual">
-            <div class="logo-container">
-                <div class="logo">
-                    <svg viewBox="0 0 382 677" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-                        <g transform="matrix(1,0,0,1,-134.548,-142.391)">
-                            <g transform="matrix(0.993789,0,0,1.27536,1.00621,-38.4214)">
-                                <rect x="162" y="171" width="322" height="483" style="fill:rgb(227,0,255);fill-opacity:0;"/>
-                                <path d="M484,171L484,654L162,654L162,171L484,171ZM475.615,177.534L170.385,177.534L170.385,647.466L475.615,647.466L475.615,177.534Z"/>
+            <div class="content-wrapper">
+                <div class="logo-container">
+                    <div class="logo">
+                        <svg viewBox="0 0 382 677" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                            <g transform="matrix(1,0,0,1,-134.548,-142.391)">
+                                <g transform="matrix(0.993789,0,0,1.27536,1.00621,-38.4214)">
+                                    <rect x="162" y="171" width="322" height="483" style="fill:rgb(227,0,255);fill-opacity:0;"/>
+                                    <path d="M484,171L484,654L162,654L162,171L484,171ZM475.615,177.534L170.385,177.534L170.385,647.466L475.615,647.466L475.615,177.534Z"/>
+                                </g>
+                                <g transform="matrix(1,0,0,1,-49.6429,73)">
+                                    <text x="248.84px" y="282.244px" style="font-family:'Andale Mono',monospace;font-size:200px;fill:#000000;">KU</text>
+                                    <text x="248.84px" y="482.244px" style="font-family:'Andale Mono',monospace;font-size:200px;fill:#000000;">NO</text>
+                                    <text x="248.84px" y="682.244px" style="font-family:'Andale Mono',monospace;font-size:200px;fill:#000000;">15</text>
+                                </g>
                             </g>
-                            <g transform="matrix(1,0,0,1,-49.6429,73)">
-                                <text x="248.84px" y="282.244px" style="font-family:'Andale Mono',monospace;font-size:200px;fill:#000000;">KU</text>
-                                <text x="248.84px" y="482.244px" style="font-family:'Andale Mono',monospace;font-size:200px;fill:#000000;">NO</text>
-                                <text x="248.84px" y="682.244px" style="font-family:'Andale Mono',monospace;font-size:200px;fill:#000000;">15</text>
-                            </g>
-                        </g>
-                    </svg>
+                        </svg>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-image-container">
-                <div class="hero-image-wrapper">
-                    <!-- IMAGEN ACTUALIZADA -->
-                    <img src="kuno15eingag.png" alt="KUNO15" class="hero-image">
+                <div class="hero-image-container">
+                    <div class="hero-image-wrapper">
+                        <!-- IMAGEN ACTUALIZADA -->
+                        <img src="kuno15eingag.png" alt="KUNO15" class="hero-image">
+                    </div>
                 </div>
             </div>
         </section>
