@@ -62,7 +62,7 @@
         }
 
         .content {
-            max-width: 800px;
+            max-width: 900px;
             text-align: center;
         }
 
@@ -89,15 +89,40 @@
             font-size: 1.1rem;
         }
 
-        .hours-info {
+        .hours-section {
             margin-top: 3rem;
             text-align: left;
         }
 
-        .hours-info h3 {
-            margin-bottom: 1rem;
+        .hours-section h3 {
+            margin-bottom: 1.5rem;
             text-transform: uppercase;
             font-size: 1.2rem;
+        }
+
+        .hours-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .weekdays, .weekend {
+            text-align: left;
+        }
+
+        .season-hours {
+            margin-bottom: 1.5rem;
+        }
+
+        .season-hours h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .season-hours p {
+            margin: 0.3rem 0;
+            font-size: 1rem;
         }
 
         @media (max-width: 768px) {
@@ -128,6 +153,11 @@
             .contact-info p {
                 font-size: 1rem;
             }
+            
+            .hours-columns {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -136,6 +166,10 @@
             }
             
             .contact-info p {
+                font-size: 0.9rem;
+            }
+            
+            .season-hours p {
                 font-size: 0.9rem;
             }
         }
@@ -158,21 +192,58 @@
         
         <div class="contact-info">
             <h3>Adresse</h3>
-            <p>KUNO15</p>
-            <p>Musterstraße 123</p>
-            <p>12345 Berlin</p>
+            <p>Kuno-Fischer-Straße 15</p>
+            <p>14057 Berlin</p>
         </div>
 
         <div class="contact-info">
             <h3>Kontakt</h3>
-            <p>Telefon: +49 30 12345678</p>
-            <p>Email: info@kuno15.com</p>
+            <p>Telefon: 01575 6883740</p>
         </div>
 
-        <div class="hours-info">
+        <div class="hours-section">
             <h3>Öffnungszeiten</h3>
-            <p>Montag - Sonntag: 8:00 - 18:00 Uhr</p>
-            <p>Mittagstisch: Mo-Fr 12:00 - 16:00 Uhr</p>
+            <div class="hours-columns">
+                <div class="weekdays">
+                    <h4>Montag - Freitag</h4>
+                    <div class="season-hours">
+                        <h4>Winter</h4>
+                        <p>9:00 - 17:00</p>
+                    </div>
+                    <div class="season-hours">
+                        <h4>Frühling</h4>
+                        <p>9:00 - 18:00</p>
+                    </div>
+                    <div class="season-hours">
+                        <h4>Sommer</h4>
+                        <p>9:00 - 20:00</p>
+                    </div>
+                    <div class="season-hours">
+                        <h4>Herbst</h4>
+                        <p>9:00 - 18:00</p>
+                    </div>
+                </div>
+                
+                <div class="weekend">
+                    <h4>Samstag - Sonntag</h4>
+                    <div class="season-hours">
+                        <h4>Winter</h4>
+                        <p>10:00 - 17:00</p>
+                    </div>
+                    <div class="season-hours">
+                        <h4>Frühling</h4>
+                        <p>10:00 - 18:00</p>
+                    </div>
+                    <div class="season-hours">
+                        <h4>Sommer</h4>
+                        <p>10:00 - 20:00</p>
+                    </div>
+                    <div class="season-hours">
+                        <h4>Herbst</h4>
+                        <p>10:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
