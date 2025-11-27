@@ -1,10 +1,128 @@
 <!DOCTYPE html>
 <html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns - KUNO15</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'Andale Mono';
+            src: local('Andale Mono'), local('AndaleMono');
+        }
+
+        body {
+            font-family: 'Andale Mono', 'Courier New', monospace;
+            color: #000;
+            background: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .back-arrow {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+        }
+
+        .back-arrow a {
+            text-decoration: none;
+            color: #000;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .back-arrow a:hover {
+            color: #666;
+        }
+
+        .next-arrow {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+        }
+
+        .next-arrow a {
+            text-decoration: none;
+            color: #000;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .next-arrow a:hover {
+            color: #666;
+        }
+
+        .hero-text {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .hero-text p {
+            margin: 0.8rem 0;
+            font-size: 1.2rem;
+            line-height: 1.3;
+        }
+
+        .welcome-section {
+            margin: 2rem 0;
+            padding: 1.5rem 0;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+
+        @media (max-width: 768px) {
+            .back-arrow, .next-arrow {
+                top: 1rem;
+            }
+            
+            .back-arrow {
+                left: 1rem;
+            }
+            
+            .next-arrow {
+                right: 1rem;
+            }
+            
+            .back-arrow a, .next-arrow a {
+                font-size: 1.5rem;
+            }
+            
+            .hero-text p {
+                font-size: 1.1rem;
+                margin: 0.6rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .hero-text p {
+                font-size: 1rem;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Back Arrow-->
+    <!-- Back Arrow to Startseite -->
     <div class="back-arrow">
-        <a href="index.html">←</a>
+        <a href="startseite.html">←</a>
+    </div>
+
+    <!-- Next Arrow to Getränke -->
+    <div class="next-arrow">
+        <a href="getranke.html">→</a>
     </div>
 
     <!-- Text Content -->
