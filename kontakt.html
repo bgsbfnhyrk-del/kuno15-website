@@ -90,6 +90,19 @@
             font-size: 1.1rem;
         }
 
+        .address-link {
+            text-decoration: none;
+            color: #000;
+            border-bottom: 1px solid #000;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .address-link:hover {
+            color: #666;
+            border-bottom-color: #666;
+        }
+
         .hours-section {
             margin-top: 3rem;
             text-align: left;
@@ -193,8 +206,14 @@
         
         <div class="contact-info">
             <h3>Adresse</h3>
-            <p>Kuno-Fischer-Straße 15</p>
-            <p>14057 Berlin</p>
+            <p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Kuno-Fischer-Straße+15+14057+Berlin" 
+                   target="_blank" 
+                   class="address-link">
+                    Kuno-Fischer-Straße 15<br>
+                    14057 Berlin
+                </a>
+            </p>
         </div>
 
         <div class="contact-info">
@@ -207,7 +226,6 @@
             <div class="hours-columns">
                 <div class="weekdays">
                     <h4>Montag - Freitag</h4>
-                    <!-- ORDEN ACTUALIZADO: Frühling primero, Winter último -->
                     <div class="season-hours">
                         <h4>Frühling</h4>
                         <p>9:00 - 18:00</p>
@@ -228,7 +246,6 @@
                 
                 <div class="weekend">
                     <h4>Samstag - Sonntag</h4>
-                    <!-- ORDEN ACTUALIZADO: Frühling primero, Winter último -->
                     <div class="season-hours">
                         <h4>Frühling</h4>
                         <p>10:00 - 18:00</p>
