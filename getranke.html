@@ -20,6 +20,7 @@
             font-family: 'Andale Mono', 'Courier New', monospace;
             color: #000;
             background: #fff;
+            overflow-x: hidden;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -101,54 +102,12 @@
             font-size: 1.1rem;
         }
 
-        /* Mobile Optimization - MANTIENE DISEÑO ORIGINAL */
+        /* Mobile Optimizations */
         @media (max-width: 768px) {
             body {
-                padding: 1.5rem;
-            }
-            
-            .back-arrow, .next-arrow {
-                top: 1.5rem;
-            }
-            
-            .back-arrow {
-                left: 1.5rem;
-            }
-            
-            .next-arrow {
-                right: 1.5rem;
-            }
-            
-            .back-arrow a, .next-arrow a {
-                font-size: 1.8rem;
-            }
-            
-            .section-title {
-                font-size: 1.8rem;
-                margin-bottom: 1.8rem;
-            }
-            
-            .content {
-                max-width: 95%;
-            }
-            
-            .price-table {
-                font-size: 0.95rem;
-            }
-            
-            .price-table td {
-                padding: 0.4rem 0;
-            }
-            
-            .price-section h3 {
-                font-size: 1.05rem;
-                margin-bottom: 1.2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
                 padding: 1rem;
+                align-items: flex-start;
+                padding-top: 4rem;
             }
             
             .back-arrow, .next-arrow {
@@ -165,19 +124,36 @@
             
             .back-arrow a, .next-arrow a {
                 font-size: 1.5rem;
+                background: rgba(255,255,255,0.9);
+                padding: 0.5rem;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             
             .section-title {
-                font-size: 1.6rem;
+                font-size: 1.5rem;
                 margin-bottom: 1.5rem;
+            }
+            
+            .content {
+                padding: 0;
+                width: 100%;
             }
             
             .price-table {
                 font-size: 0.9rem;
             }
             
+            .price-table td {
+                padding: 0.4rem 0;
+            }
+            
             .price-table td:last-child {
-                padding-left: 1.5rem;
+                padding-left: 1rem;
             }
             
             .price-section {
@@ -187,33 +163,66 @@
             .price-section h3 {
                 font-size: 1rem;
                 margin-bottom: 1rem;
+                line-height: 1.3;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 0.5rem;
+                padding-top: 3.5rem;
+            }
+            
+            .price-table {
+                font-size: 0.85rem;
+            }
+            
+            .price-table td {
+                padding: 0.3rem 0;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .price-section h3 {
+                font-size: 0.95rem;
+            }
+            
+            .back-arrow a, .next-arrow a {
+                font-size: 1.2rem;
+                width: 35px;
+                height: 35px;
             }
         }
 
         @media (max-width: 360px) {
             .price-table {
-                font-size: 0.85rem;
+                font-size: 0.8rem;
             }
             
             .price-table td:last-child {
-                padding-left: 1rem;
+                padding-left: 0.5rem;
             }
             
             .section-title {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Back Arrow to Über uns -->
     <div class="back-arrow">
         <a href="uber-uns.html">←</a>
     </div>
 
+    <!-- Next Arrow to Speisen -->
     <div class="next-arrow">
         <a href="speisen.html">→</a>
     </div>
 
+    <!-- Content -->
     <div class="content">
         <h1 class="section-title">Getränke</h1>
         
