@@ -40,40 +40,47 @@
             height: calc(100vh - 50px);
             align-items: center;
             justify-content: center;
+            padding: 1rem;
         }
 
         .content-wrapper {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 3rem;
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
         }
 
         .logo-container {
+            flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .logo {
-            width: 280px;
+            width: 100%;
+            max-width: 250px;
             height: auto;
         }
 
         .hero-image-container {
+            flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .hero-image {
-            width: 400px;
+            width: 100%;
+            max-width: 300px;
             height: auto;
-            max-height: 60vh;
+            max-height: 50vh;
             object-fit: contain;
         }
 
-        /* Bottom Navigation Menu - ACTUALIZADO */
+        /* Bottom Navigation Menu */
         .bottom-navigation {
             height: 50px;
             width: 100%;
@@ -81,6 +88,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            border-top: 1px solid #f0f0f0;
         }
 
         .nav-menu {
@@ -88,7 +96,7 @@
             width: 100%;
             max-width: 1000px;
             justify-content: space-between;
-            padding: 0 2rem;
+            padding: 0 1rem;
         }
 
         .nav-menu ul {
@@ -96,6 +104,7 @@
             display: flex;
             width: 100%;
             justify-content: space-between;
+            gap: 0.5rem;
         }
 
         .nav-menu li {
@@ -107,79 +116,97 @@
             text-decoration: none;
             color: #000;
             text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
+            font-size: 0.7rem;
+            letter-spacing: 0.5px;
             font-weight: normal;
             transition: color 0.3s;
             display: block;
-            padding: 0.6rem 0.3rem;
+            padding: 0.5rem 0.2rem;
+            white-space: nowrap;
         }
 
         .nav-menu a:hover {
             color: #666;
-            background: rgba(0, 0, 0, 0.05);
         }
 
-        /* Responsive Design */
+        /* Mobile Optimizations - LOGO AND PHOTO SIDE BY SIDE */
         @media (max-width: 768px) {
             .main-visual {
-                flex-direction: column;
-                height: calc(100vh - 70px);
+                height: calc(100vh - 60px);
+                padding: 0.5rem;
             }
             
             .content-wrapper {
-                flex-direction: column;
-                gap: 2rem;
+                gap: 1rem;
+                flex-direction: row; /* MANTIENE lado a lado */
             }
             
             .logo {
-                width: 200px;
+                max-width: 120px; /* Más pequeño pero visible */
             }
             
             .hero-image {
-                width: 300px;
-                max-height: 35vh;
+                max-width: 150px; /* Más pequeño pero visible */
+                max-height: 40vh;
             }
             
             .bottom-navigation {
-                height: 70px;
+                height: 60px;
             }
             
-            .nav-menu ul {
-                flex-direction: column;
-                gap: 0.3rem;
+            .nav-menu {
+                padding: 0 0.5rem;
             }
             
             .nav-menu a {
-                padding: 0.4rem;
-                font-size: 0.7rem;
+                font-size: 0.6rem;
+                padding: 0.4rem 0.1rem;
+                letter-spacing: 0.3px;
             }
         }
 
         @media (max-width: 480px) {
-            .bottom-navigation {
-                height: 80px;
-            }
-            
-            .nav-menu a {
-                font-size: 0.65rem;
-                letter-spacing: 0.5px;
+            .content-wrapper {
+                gap: 0.8rem;
             }
             
             .logo {
-                width: 160px;
+                max-width: 100px;
             }
             
             .hero-image {
-                width: 250px;
-                max-height: 30vh;
+                max-width: 120px;
+                max-height: 35vh;
+            }
+            
+            .nav-menu a {
+                font-size: 0.55rem;
+                padding: 0.3rem 0.1rem;
+            }
+            
+            .bottom-navigation {
+                height: 55px;
+            }
+        }
+
+        /* Para pantallas muy pequeñas */
+        @media (max-width: 360px) {
+            .logo {
+                max-width: 90px;
+            }
+            
+            .hero-image {
+                max-width: 110px;
+            }
+            
+            .nav-menu a {
+                font-size: 0.5rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="full-screen-composition">
-        <!-- Main Visual Content - Logo and Hero Image Side by Side -->
         <section class="main-visual">
             <div class="content-wrapper">
                 <div class="logo-container">
@@ -205,7 +232,6 @@
             </div>
         </section>
 
-        <!-- Bottom Navigation Menu ACTUALIZADO -->
         <nav class="bottom-navigation">
             <div class="nav-menu">
                 <ul>
@@ -220,14 +246,11 @@
     </div>
 
     <script>
-        // Ensure the composition always fills the viewport
         function adjustLayout() {
             const composition = document.querySelector('.full-screen-composition');
             composition.style.height = window.innerHeight + 'px';
             composition.style.width = window.innerWidth + 'px';
         }
-
-        // Adjust on load and resize
         window.addEventListener('load', adjustLayout);
         window.addEventListener('resize', adjustLayout);
     </script>
