@@ -37,7 +37,7 @@
             flex: 1;
             display: flex;
             width: 100%;
-            height: calc(100vh - 60px); /* Ajustado por menú más pequeño */
+            height: calc(100vh - 50px); /* Más espacio para el contenido */
             align-items: center;
             justify-content: center;
         }
@@ -75,13 +75,13 @@
 
         /* Bottom Navigation Menu - ACTUALIZADO */
         .bottom-navigation {
-            height: 60px; /* Más pequeño */
+            height: 50px; /* Más compacto */
             width: 100%;
             background: #fff; /* Fondo blanco */
             display: flex;
             align-items: center;
             justify-content: center;
-            border-top: 1px solid #000; /* Línea sutil arriba */
+            /* border-top: 1px solid #000;  LÍNEA ELIMINADA */
         }
 
         .nav-menu {
@@ -113,7 +113,7 @@
             font-weight: normal; /* Menos bold */
             transition: color 0.3s;
             display: block;
-            padding: 0.8rem 0.3rem; /* Padding reducido */
+            padding: 0.6rem 0.3rem; /* Padding más compacto */
         }
 
         .nav-menu a:hover {
@@ -125,7 +125,7 @@
         @media (max-width: 768px) {
             .main-visual {
                 flex-direction: column;
-                height: calc(100vh - 80px);
+                height: calc(100vh - 70px);
             }
             
             .content-wrapper {
@@ -143,7 +143,7 @@
             }
             
             .bottom-navigation {
-                height: 80px;
+                height: 70px;
             }
             
             .nav-menu ul {
@@ -159,7 +159,7 @@
 
         @media (max-width: 480px) {
             .bottom-navigation {
-                height: 90px;
+                height: 80px;
             }
             
             .nav-menu a {
@@ -201,7 +201,7 @@
                     </div>
                 </div>
                 <div class="hero-image-container">
-                    <img src="kuno15eingag.png" alt="KUNO15" class="hero-image">
+                    <img src="images/kuno15eingag.png" alt="KUNO15 Eingang" class="hero-image">
                 </div>
             </div>
         </section>
@@ -210,7 +210,6 @@
         <nav class="bottom-navigation">
             <div class="nav-menu">
                 <ul>
-                    <!-- STARTSEITE ELIMINADO -->
                     <li><a href="uber-uns.html">Über uns</a></li>
                     <li><a href="getranke.html">Getränke</a></li>
                     <li><a href="speisen.html">Speisen</a></li>
