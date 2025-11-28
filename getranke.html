@@ -87,9 +87,14 @@
             vertical-align: top;
         }
 
+        .price-table td:first-child {
+            width: 70%; /* Ajuste para que el espacio entre texto y precio sea igual a Speisen */
+        }
+
         .price-table td:last-child {
             text-align: right;
             padding-left: 2rem;
+            width: 30%; /* Ajuste para que el espacio entre texto y precio sea igual a Speisen */
         }
 
         .price-section {
@@ -100,6 +105,7 @@
             margin-bottom: 1.5rem;
             text-transform: uppercase;
             font-size: 1.1rem;
+            letter-spacing: 0.5px; /* Añadido para igualar con Speisen */
         }
 
         /* MÓVIL: Solo ajustes necesarios para que quepa */
@@ -151,6 +157,7 @@
             .price-section h3 {
                 font-size: 1rem;
                 margin-bottom: 1rem;
+                letter-spacing: 0.3px; /* Ajuste para móvil */
             }
         }
 
@@ -171,6 +178,15 @@
             .section-title {
                 font-size: 1.3rem;
             }
+            
+            .price-table td:first-child {
+                width: 65%; /* Ajuste para móvil pequeño */
+            }
+            
+            .price-table td:last-child {
+                width: 35%; /* Ajuste para móvil pequeño */
+                padding-left: 0.8rem;
+            }
         }
 
         @media (max-width: 360px) {
@@ -180,6 +196,14 @@
             
             .price-table td:last-child {
                 padding-left: 0.5rem;
+            }
+            
+            .price-table td:first-child {
+                width: 60%; /* Ajuste para pantallas muy pequeñas */
+            }
+            
+            .price-table td:last-child {
+                width: 40%; /* Ajuste para pantallas muy pequeñas */
             }
         }
     </style>
