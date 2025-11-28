@@ -20,58 +20,69 @@
             font-family: 'Andale Mono', 'Courier New', monospace;
             color: #000;
             background: #fff;
-            overflow-x: hidden;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            padding: 1rem;
         }
 
         .back-arrow {
             position: fixed;
-            top: 2rem;
-            left: 2rem;
+            top: 1rem;
+            left: 1rem;
+            z-index: 100;
         }
 
         .back-arrow a {
             text-decoration: none;
             color: #000;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: bold;
-        }
-
-        .back-arrow a:hover {
-            color: #666;
+            background: rgba(255,255,255,0.9);
+            padding: 0.5rem;
+            border-radius: 50%;
+            display: block;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 1;
         }
 
         .next-arrow {
             position: fixed;
-            top: 2rem;
-            right: 2rem;
+            top: 1rem;
+            right: 1rem;
+            z-index: 100;
         }
 
         .next-arrow a {
             text-decoration: none;
             color: #000;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: bold;
-        }
-
-        .next-arrow a:hover {
-            color: #666;
+            background: rgba(255,255,255,0.9);
+            padding: 0.5rem;
+            border-radius: 50%;
+            display: block;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 1;
         }
 
         .content {
+            width: 100%;
             max-width: 900px;
             text-align: center;
+            padding: 3rem 0;
         }
 
         .section-title {
-            font-size: 2rem;
-            margin-bottom: 3rem;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
         .contact-info {
@@ -80,14 +91,14 @@
         }
 
         .contact-info h3 {
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             text-transform: uppercase;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         .contact-info p {
-            margin: 0.5rem 0;
-            font-size: 1.1rem;
+            margin: 0.4rem 0;
+            font-size: 0.9rem;
         }
 
         .address-link {
@@ -104,20 +115,20 @@
         }
 
         .hours-section {
-            margin-top: 3rem;
+            margin-top: 2.5rem;
             text-align: left;
         }
 
         .hours-section h3 {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
             text-transform: uppercase;
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         .hours-columns {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 2rem;
         }
 
         .weekdays, .weekend {
@@ -125,96 +136,113 @@
         }
 
         .days-title {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
             text-transform: uppercase;
         }
 
         .season-hours {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
 
         .season-hours h4 {
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
         }
 
         .season-hours p {
-            margin: 0.3rem 0;
-            font-size: 1rem;
+            margin: 0.2rem 0;
+            font-size: 0.85rem;
         }
 
         @media (max-width: 768px) {
-            .back-arrow, .next-arrow {
-                top: 1rem;
-            }
-            
-            .back-arrow {
-                left: 1rem;
-            }
-            
-            .next-arrow {
-                right: 1rem;
-            }
-            
-            .back-arrow a, .next-arrow a {
-                font-size: 1.5rem;
+            .content {
+                padding: 2rem 0;
             }
             
             .section-title {
-                font-size: 1.5rem;
-            }
-            
-            .content {
-                padding: 0 1rem;
-            }
-            
-            .contact-info p {
-                font-size: 1rem;
+                font-size: 1.3rem;
             }
             
             .hours-columns {
-                grid-template-columns: 1fr;
-                gap: 2rem;
+                gap: 1.5rem;
             }
             
-            .days-title {
-                margin-bottom: 1.2rem;
+            .contact-info p {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hours-columns {
+                grid-template-columns: 1fr;
+                gap: 2rem;
             }
         }
 
         @media (max-width: 480px) {
             body {
-                padding: 1rem;
+                padding: 0.5rem;
+            }
+            
+            .content {
+                padding: 1.5rem 0;
+            }
+            
+            .section-title {
+                font-size: 1.2rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .contact-info h3, .hours-section h3 {
+                font-size: 0.95rem;
             }
             
             .contact-info p {
-                font-size: 0.9rem;
-            }
-            
-            .season-hours p {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
             }
             
             .days-title {
+                font-size: 0.9rem;
                 margin-bottom: 1rem;
+            }
+            
+            .season-hours h4 {
+                font-size: 0.8rem;
+            }
+            
+            .season-hours p {
+                font-size: 0.8rem;
+            }
+            
+            .back-arrow a, .next-arrow a {
+                font-size: 1.2rem;
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .contact-info p {
+                font-size: 0.75rem;
+            }
+            
+            .season-hours p {
+                font-size: 0.75rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Back Arrow to Mittagstisch -->
     <div class="back-arrow">
         <a href="mittagstisch.html">←</a>
     </div>
 
-    <!-- Next Arrow to Startseite (ahora index.html) -->
     <div class="next-arrow">
         <a href="index.html">→</a>
     </div>
 
-    <!-- Content -->
     <div class="content">
         <h1 class="section-title">Kontakt</h1>
         
