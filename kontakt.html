@@ -124,6 +124,12 @@
             text-align: left;
         }
 
+        .days-title {
+            margin-bottom: 1.5rem; /* ESPACIO AÑADIDO */
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
         .season-hours {
             margin-bottom: 1.5rem;
         }
@@ -172,6 +178,10 @@
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
+            
+            .days-title {
+                margin-bottom: 1.2rem; /* Espacio ajustado para móvil */
+            }
         }
 
         @media (max-width: 480px) {
@@ -185,6 +195,10 @@
             
             .season-hours p {
                 font-size: 0.9rem;
+            }
+            
+            .days-title {
+                margin-bottom: 1rem; /* Espacio ajustado para móvil pequeño */
             }
         }
     </style>
@@ -225,7 +239,7 @@
             <h3>Öffnungszeiten</h3>
             <div class="hours-columns">
                 <div class="weekdays">
-                    <h4>Montag - Freitag</h4>
+                    <h4 class="days-title">Montag - Freitag</h4> <!-- CLASE AÑADIDA -->
                     <div class="season-hours">
                         <h4>Frühling</h4>
                         <p>9:00 - 18:00</p>
@@ -245,7 +259,7 @@
                 </div>
                 
                 <div class="weekend">
-                    <h4>Samstag - Sonntag</h4>
+                    <h4 class="days-title">Samstag - Sonntag</h4> <!-- CLASE AÑADIDA -->
                     <div class="season-hours">
                         <h4>Frühling</h4>
                         <p>10:00 - 18:00</p>
