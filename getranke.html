@@ -28,17 +28,14 @@
             padding: 2rem;
         }
 
-        /* MENÚ HAMBURGUESA */
+        /* MENÚ HAMBURGUESA INFERIOR IZQUIERDA - SIN BORDES */
         .menu-toggle {
             position: fixed;
-            top: 2rem;
+            bottom: 2rem;
             left: 2rem;
             z-index: 1000;
             cursor: pointer;
-            background: #fff;
-            border: 1px solid #000;
             padding: 0.5rem;
-            border-radius: 4px;
             width: 45px;
             height: 45px;
             display: flex;
@@ -46,6 +43,7 @@
             justify-content: center;
             align-items: center;
             gap: 4px;
+            /* SIN BORDES - solo las líneas */
         }
 
         .menu-toggle span {
@@ -116,10 +114,11 @@
             border-bottom: 2px solid #000;
         }
 
+        /* FLECHAS SIN BORDES */
         .back-arrow {
             position: fixed;
             top: 2rem;
-            left: 5rem; /* Ajustado para dejar espacio al menú */
+            left: 2rem;
         }
 
         .back-arrow a {
@@ -127,19 +126,14 @@
             color: #000;
             font-size: 2rem;
             font-weight: bold;
-            background: #fff;
-            border: 1px solid #000;
-            width: 45px;
-            height: 45px;
+            /* SIN BORDES - solo la flecha */
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 4px;
         }
 
         .back-arrow a:hover {
             color: #666;
-            background: #f0f0f0;
         }
 
         .next-arrow {
@@ -153,19 +147,14 @@
             color: #000;
             font-size: 2rem;
             font-weight: bold;
-            background: #fff;
-            border: 1px solid #000;
-            width: 45px;
-            height: 45px;
+            /* SIN BORDES - solo la flecha */
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 4px;
         }
 
         .next-arrow a:hover {
             color: #666;
-            background: #f0f0f0;
         }
 
         .content {
@@ -219,11 +208,12 @@
             body {
                 padding: 1rem;
                 align-items: flex-start;
-                padding-top: 6rem;
+                padding-top: 5rem;
+                padding-bottom: 6rem; /* Espacio para el menú inferior */
             }
             
             .menu-toggle {
-                top: 1rem;
+                bottom: 1rem;
                 left: 1rem;
                 width: 40px;
                 height: 40px;
@@ -236,13 +226,11 @@
             
             .back-arrow {
                 top: 1rem;
-                left: 4rem;
+                left: 1rem;
             }
             
             .back-arrow a {
-                width: 40px;
-                height: 40px;
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
             
             .next-arrow {
@@ -251,9 +239,7 @@
             }
             
             .next-arrow a {
-                width: 40px;
-                height: 40px;
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
             
             .menu-items a {
@@ -292,11 +278,12 @@
         @media (max-width: 480px) {
             body {
                 padding: 0.5rem;
-                padding-top: 5.5rem;
+                padding-top: 4.5rem;
+                padding-bottom: 5.5rem;
             }
             
             .menu-toggle {
-                top: 0.8rem;
+                bottom: 0.8rem;
                 left: 0.8rem;
                 width: 35px;
                 height: 35px;
@@ -304,13 +291,11 @@
             
             .back-arrow {
                 top: 0.8rem;
-                left: 3.5rem;
+                left: 0.8rem;
             }
             
             .back-arrow a {
-                width: 35px;
-                height: 35px;
-                font-size: 1.2rem;
+                font-size: 1.5rem;
             }
             
             .next-arrow {
@@ -319,9 +304,7 @@
             }
             
             .next-arrow a {
-                width: 35px;
-                height: 35px;
-                font-size: 1.2rem;
+                font-size: 1.5rem;
             }
             
             .menu-items a {
@@ -374,7 +357,7 @@
     </style>
 </head>
 <body>
-    <!-- Menú Hamburguesa -->
+    <!-- Menú Hamburguesa - ESQUINA INFERIOR IZQUIERDA -->
     <div class="menu-toggle" id="menuToggle">
         <span></span>
         <span></span>
@@ -393,12 +376,12 @@
         </ul>
     </div>
 
-    <!-- Back Arrow to Über uns -->
+    <!-- Back Arrow - SIN BORDES -->
     <div class="back-arrow">
         <a href="uber-uns.html">←</a>
     </div>
 
-    <!-- Next Arrow to Speisen -->
+    <!-- Next Arrow - SIN BORDES -->
     <div class="next-arrow">
         <a href="speisen.html">→</a>
     </div>
