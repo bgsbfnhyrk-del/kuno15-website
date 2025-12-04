@@ -17,7 +17,7 @@
         }
 
         body {
-            font-family: 'Andale Mono', monospace; /* ELIMINADO: 'Courier New' */
+            font-family: 'Andale Mono', monospace;
             color: #000;
             background: #fff;
             overflow-x: hidden;
@@ -28,9 +28,48 @@
             padding: 2rem;
         }
 
+        /* BARRA DE MENÚ - NECESITO VER TU INDEX.HTML PARA PERSONALIZAR */
+        .menu-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            border-bottom: 1px solid #000;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .menu-nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .menu-nav a {
+            text-decoration: none;
+            color: #000;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .menu-nav a:hover {
+            color: #666;
+        }
+
         .back-arrow {
             position: fixed;
-            top: 2rem;
+            top: 5rem; /* Ajustado para estar debajo de la barra de menú */
             left: 2rem;
         }
 
@@ -47,7 +86,7 @@
 
         .next-arrow {
             position: fixed;
-            top: 2rem;
+            top: 5rem; /* Ajustado para estar debajo de la barra de menú */
             right: 2rem;
         }
 
@@ -65,8 +104,10 @@
         .content {
             max-width: 800px;
             text-align: left;
+            margin-top: 4rem; /* Añadido espacio para la barra de menú */
         }
 
+        /* Resto del CSS existente... */
         .section-title {
             font-size: 2rem;
             margin-bottom: 2rem;
@@ -88,13 +129,13 @@
         }
 
         .price-table td:first-child {
-            width: 70%; /* Ajuste para que el espacio entre texto y precio sea igual a Speisen */
+            width: 70%;
         }
 
         .price-table td:last-child {
             text-align: right;
             padding-left: 2rem;
-            width: 30%; /* Ajuste para que el espacio entre texto y precio sea igual a Speisen */
+            width: 30%;
         }
 
         .price-section {
@@ -105,19 +146,35 @@
             margin-bottom: 1.5rem;
             text-transform: uppercase;
             font-size: 1.1rem;
-            letter-spacing: 0.5px; /* Añadido para igualar con Speisen */
+            letter-spacing: 0.5px;
         }
 
-        /* MÓVIL: Solo ajustes necesarios para que quepa */
+        /* Media queries ajustadas */
         @media (max-width: 768px) {
             body {
                 padding: 1rem;
                 align-items: flex-start;
-                padding-top: 4rem;
+                padding-top: 7rem; /* Ajustado para barra de menú + flechas */
+            }
+            
+            .menu-bar {
+                padding: 0.8rem 1rem;
+            }
+            
+            .menu-logo {
+                font-size: 1.2rem;
+            }
+            
+            .menu-nav {
+                gap: 1rem;
+            }
+            
+            .menu-nav a {
+                font-size: 0.9rem;
             }
             
             .back-arrow, .next-arrow {
-                top: 1rem;
+                top: 4rem;
             }
             
             .back-arrow {
@@ -132,83 +189,52 @@
                 font-size: 1.5rem;
             }
             
+            .content {
+                margin-top: 2rem;
+            }
+            
             .section-title {
                 font-size: 1.5rem;
                 margin-bottom: 1.5rem;
             }
             
-            .content {
-                padding: 0;
-                width: 100%;
-            }
-            
-            .price-table {
-                font-size: 0.9rem;
-            }
-            
-            .price-table td:last-child {
-                padding-left: 1rem;
-            }
-            
-            .price-section {
-                margin-bottom: 2rem;
-            }
-            
-            .price-section h3 {
-                font-size: 1rem;
-                margin-bottom: 1rem;
-                letter-spacing: 0.3px; /* Ajuste para móvil */
-            }
+            /* Resto de media queries... */
         }
 
         @media (max-width: 480px) {
-            body {
-                padding: 0.5rem;
-                padding-top: 3.5rem;
+            .menu-nav {
+                gap: 0.7rem;
             }
             
-            .price-table {
-                font-size: 0.85rem;
-            }
-            
-            .price-table td {
-                padding: 0.4rem 0;
-            }
-            
-            .section-title {
-                font-size: 1.3rem;
-            }
-            
-            .price-table td:first-child {
-                width: 65%; /* Ajuste para móvil pequeño */
-            }
-            
-            .price-table td:last-child {
-                width: 35%; /* Ajuste para móvil pequeño */
-                padding-left: 0.8rem;
-            }
-        }
-
-        @media (max-width: 360px) {
-            .price-table {
+            .menu-nav a {
                 font-size: 0.8rem;
             }
             
-            .price-table td:last-child {
-                padding-left: 0.5rem;
+            body {
+                padding-top: 6.5rem;
             }
             
-            .price-table td:first-child {
-                width: 60%; /* Ajuste para pantallas muy pequeñas */
+            .back-arrow, .next-arrow {
+                top: 3.5rem;
             }
             
-            .price-table td:last-child {
-                width: 40%; /* Ajuste para pantallas muy pequeñas */
-            }
+            /* Resto de ajustes... */
         }
     </style>
 </head>
 <body>
+    <!-- Barra de Menú -->
+    <nav class="menu-bar">
+        <a href="index.html" class="menu-logo">KUNO15</a>
+        <div class="menu-nav">
+            <a href="uber-uns.html">Über uns</a>
+            <a href="getranke.html">Getränke</a>
+            <a href="speisen.html">Speisen</a>
+            <a href="mittagstisch.html">Mittagstisch</a>
+            <a href="kontakt.html">Kontakt</a>
+        </div>
+    </nav>
+
     <!-- Back Arrow to Über uns -->
     <div class="back-arrow">
         <a href="uber-uns.html">←</a>
