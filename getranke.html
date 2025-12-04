@@ -26,50 +26,60 @@
             align-items: center;
             justify-content: center;
             padding: 2rem;
+            padding-bottom: 5rem; /* Espacio para la barra inferior */
         }
 
-        /* BARRA DE MENÚ - NECESITO VER TU INDEX.HTML PARA PERSONALIZAR */
-        .menu-bar {
+        /* BARRA INFERIOR DE MENÚ - SIMILAR A INDEX */
+        .bottom-menu {
             position: fixed;
-            top: 0;
+            bottom: 0;
             left: 0;
             width: 100%;
             background: #fff;
-            border-bottom: 1px solid #000;
+            border-top: 1px solid #000;
             z-index: 1000;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 1rem 0;
         }
 
-        .menu-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-decoration: none;
-            color: #000;
+        .menu-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
         .menu-nav {
             display: flex;
-            gap: 2rem;
+            justify-content: center;
+            gap: 3rem;
         }
 
         .menu-nav a {
             text-decoration: none;
             color: #000;
-            font-size: 1rem;
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 1px;
+            position: relative;
         }
 
         .menu-nav a:hover {
             color: #666;
         }
 
+        /* Indicador de página activa */
+        .menu-nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #000;
+        }
+
         .back-arrow {
             position: fixed;
-            top: 5rem; /* Ajustado para estar debajo de la barra de menú */
+            top: 2rem;
             left: 2rem;
         }
 
@@ -86,7 +96,7 @@
 
         .next-arrow {
             position: fixed;
-            top: 5rem; /* Ajustado para estar debajo de la barra de menú */
+            top: 2rem;
             right: 2rem;
         }
 
@@ -104,10 +114,8 @@
         .content {
             max-width: 800px;
             text-align: left;
-            margin-top: 4rem; /* Añadido espacio para la barra de menú */
         }
 
-        /* Resto del CSS existente... */
         .section-title {
             font-size: 2rem;
             margin-bottom: 2rem;
@@ -149,32 +157,35 @@
             letter-spacing: 0.5px;
         }
 
-        /* Media queries ajustadas */
+        /* Media queries ajustadas para barra inferior */
         @media (max-width: 768px) {
             body {
                 padding: 1rem;
                 align-items: flex-start;
-                padding-top: 7rem; /* Ajustado para barra de menú + flechas */
+                padding-top: 4rem;
+                padding-bottom: 4rem; /* Espacio para barra inferior móvil */
             }
             
-            .menu-bar {
-                padding: 0.8rem 1rem;
+            .bottom-menu {
+                padding: 0.8rem 0;
             }
             
-            .menu-logo {
-                font-size: 1.2rem;
+            .menu-container {
+                padding: 0 1rem;
             }
             
             .menu-nav {
-                gap: 1rem;
+                gap: 1.5rem;
+                justify-content: space-around;
             }
             
             .menu-nav a {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
+                letter-spacing: 0.5px;
             }
             
             .back-arrow, .next-arrow {
-                top: 4rem;
+                top: 1rem;
             }
             
             .back-arrow {
@@ -189,52 +200,100 @@
                 font-size: 1.5rem;
             }
             
-            .content {
-                margin-top: 2rem;
-            }
-            
             .section-title {
                 font-size: 1.5rem;
                 margin-bottom: 1.5rem;
             }
             
-            /* Resto de media queries... */
+            .content {
+                padding: 0;
+                width: 100%;
+            }
+            
+            .price-table {
+                font-size: 0.9rem;
+            }
+            
+            .price-table td:last-child {
+                padding-left: 1rem;
+            }
+            
+            .price-section {
+                margin-bottom: 2rem;
+            }
+            
+            .price-section h3 {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+                letter-spacing: 0.3px;
+            }
         }
 
         @media (max-width: 480px) {
+            body {
+                padding: 0.5rem;
+                padding-top: 3.5rem;
+                padding-bottom: 3.5rem;
+            }
+            
+            .menu-nav {
+                gap: 1rem;
+            }
+            
+            .menu-nav a {
+                font-size: 0.7rem;
+            }
+            
+            .price-table {
+                font-size: 0.85rem;
+            }
+            
+            .price-table td {
+                padding: 0.4rem 0;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .price-table td:first-child {
+                width: 65%;
+            }
+            
+            .price-table td:last-child {
+                width: 35%;
+                padding-left: 0.8rem;
+            }
+        }
+
+        @media (max-width: 360px) {
             .menu-nav {
                 gap: 0.7rem;
             }
             
             .menu-nav a {
+                font-size: 0.65rem;
+            }
+            
+            .price-table {
                 font-size: 0.8rem;
             }
             
-            body {
-                padding-top: 6.5rem;
+            .price-table td:last-child {
+                padding-left: 0.5rem;
             }
             
-            .back-arrow, .next-arrow {
-                top: 3.5rem;
+            .price-table td:first-child {
+                width: 60%;
             }
             
-            /* Resto de ajustes... */
+            .price-table td:last-child {
+                width: 40%;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Barra de Menú -->
-    <nav class="menu-bar">
-        <a href="index.html" class="menu-logo">KUNO15</a>
-        <div class="menu-nav">
-            <a href="uber-uns.html">Über uns</a>
-            <a href="getranke.html">Getränke</a>
-            <a href="speisen.html">Speisen</a>
-            <a href="mittagstisch.html">Mittagstisch</a>
-            <a href="kontakt.html">Kontakt</a>
-        </div>
-    </nav>
-
     <!-- Back Arrow to Über uns -->
     <div class="back-arrow">
         <a href="uber-uns.html">←</a>
@@ -279,5 +338,18 @@
             </table>
         </div>
     </div>
+
+    <!-- Barra de Menú Inferior (igual que index.html) -->
+    <nav class="bottom-menu">
+        <div class="menu-container">
+            <div class="menu-nav">
+                <a href="uber-uns.html">Über uns</a>
+                <a href="getranke.html" class="active">Getränke</a>
+                <a href="speisen.html">Speisen</a>
+                <a href="mittagstisch.html">Mittagstisch</a>
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+        </div>
+    </nav>
 </body>
 </html>
